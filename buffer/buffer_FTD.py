@@ -24,8 +24,14 @@ def main(args):
     print('Hyper-parameters: \n', args.__dict__)
 
     save_dir = os.path.join(args.buffer_path, args.dataset)
+    # save_dir = os.path.join(args.buffer_path, args.dataset)
     if args.dataset == "ImageNet":
         save_dir = os.path.join(save_dir, args.subset, str(args.res))
+    
+    if args.dataset == "MNIST":
+        # save_dir = os.path.join(save_dir, args.subset, str(args.res))
+        save_dir = os.path.join(save_dir, args.subset)
+
     if args.dataset in ["CIFAR10", "CIFAR100"] and not args.zca:
         save_dir += "_NO_ZCA"
     save_dir = os.path.join(save_dir, args.model)
@@ -63,9 +69,11 @@ def main(args):
     dst_train = TensorDataset(copy.deepcopy(images_all.detach()), copy.deepcopy(labels_all.detach()))
     trainloader = torch.utils.data.DataLoader(dst_train, batch_size=args.batch_train, shuffle=True, num_workers=0)
 
-    ''' set augmentation for whole-dataset training '''
-    args.dc_aug_param = get_daparam(args.dataset, args.model, args.model, None)
-    args.dc_aug_param['strategy'] = 'crop_scale_rotate'  # for whole-dataset training
+    # ''' set augmentation for whole-dataset training '''
+    args.dc_aug_param = None
+    # args.dc_aug_param = get_daparam(args.dataset, args.model, args.model, None)
+    # args.dc_aug_param['strategy'] = 'crop_scale_rotate'  # for whole-dataset training
+    # print('DC augmentation parameters: \n', args.dc_aug_param)
     print('DC augmentation parameters: \n', args.dc_aug_param)
 
     for it in range(0, args.num_experts):

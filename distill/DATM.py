@@ -57,12 +57,17 @@ def main(args):
         accs_all_exps[key] = []
 
     data_save = []
-
+    args.dsa = False
     if args.dsa:
         # args.epoch_eval_train = 1000
         args.dc_aug_param = None
 
-    args.dsa_param = ParamDiffAug()
+    else:
+        args.dc_aug_param = None
+        print("No augmentation")
+
+    # args.dsa_param = ParamDiffAug()
+    args.dsa_param = None
 
     dsa_params = args.dsa_param
     if args.zca:
@@ -139,6 +144,9 @@ def main(args):
     expert_dir = os.path.join(args.buffer_path, args.dataset)
     if args.dataset == "ImageNet":
         expert_dir = os.path.join(expert_dir, args.subset, str(args.res))
+    
+    if args.dataset == "MNIST":
+        expert_dir = os.path.join(expert_dir, args.subset)
     if args.dataset in ["CIFAR10", "CIFAR100"] and not args.zca:
         expert_dir += "_NO_ZCA"
     expert_dir = os.path.join(expert_dir, args.model)
@@ -490,6 +498,8 @@ def main(args):
 
         start_epoch = np.random.randint(args.min_start_epoch, Upper_Bound)
 
+        # print("buffer", len(buffer))
+        # print("expert_trajectory", len(expert_trajectory))
         starting_params = expert_trajectory[start_epoch]
         target_params = expert_trajectory[start_epoch+args.expert_epochs]
         target_params = torch.cat([p.data.to(args.device).reshape(-1) for p in target_params], 0)

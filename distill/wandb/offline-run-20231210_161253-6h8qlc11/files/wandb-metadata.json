@@ -1,0 +1,56 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.9.1",
+    "heartbeatAt": "2023-12-10T21:12:54.363880",
+    "startedAt": "2023-12-10T21:12:53.932408",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--cfg",
+        "../configs/MNIST/IPC10.yaml"
+    ],
+    "state": "running",
+    "program": "D:\\Documents\\0_UofT_Courses\\ECE1512 Digital Image Processing\\ProjectB\\Project_B_Supp\\Project_B_Supp\\DATM\\distill\\DATM.py",
+    "codePathLocal": "DATM.py",
+    "codePath": "distill\\DATM.py",
+    "git": {
+        "remote": "https://github.com/GzyAftermath/DATM.git",
+        "commit": "41cbb4c8adc94e549f0ed453a15964ff269904d7"
+    },
+    "email": "vaishnavsaumya@gmail.com",
+    "root": "D:/Documents/0_UofT_Courses/ECE1512 Digital Image Processing/ProjectB/Project_B_Supp/Project_B_Supp/DATM",
+    "host": "DESKTOP-TH5VB34",
+    "username": "Saumya",
+    "executable": "C:\\Users\\Saumya\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2592.0,
+        "min": 0.0,
+        "max": 2592.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2592.0,
+            "min": 0.0,
+            "max": 2592.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 785.0117149353027,
+            "used": 634.378532409668
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1660 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1660 Ti",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.76727294921875
+    }
+}

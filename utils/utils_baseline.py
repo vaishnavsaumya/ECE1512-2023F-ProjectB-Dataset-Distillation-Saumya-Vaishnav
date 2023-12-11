@@ -90,7 +90,20 @@ def get_dataset(dataset, data_path, batch_size=1, subset="imagenette", args=None
     loader_train_dict = None
     class_map_inv = None
 
-    if dataset == 'CIFAR10':
+    if dataset == 'MNIST':
+        batch_size = 256
+        channel = 1
+        im_size = (28, 28)
+        num_classes = 10
+        mean = [0.1307]
+        std = [0.3081]
+        transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(mean=mean, std=std)])
+        dst_train = datasets.MNIST(data_path, train=True, download=True, transform=transform) # no augmentation
+        dst_test = datasets.MNIST(data_path, train=False, download=True, transform=transform)
+        class_names = [str(c) for c in range(num_classes)]
+        class_map = {x:x for x in range(num_classes)}
+
+    elif dataset == 'CIFAR10':
         channel = 3
         im_size = (32, 32)
         num_classes = 10
@@ -436,8 +449,8 @@ def epoch(mode, dataloader, net, optimizer, criterion, args, aug, texture=False,
         if aug:
             if args.dsa:
                 img = DiffAugment(img, args.dsa_strategy, param=args.dsa_param)
-            else:
-                img = augment(img, args.dc_aug_param, device=device)
+            # else:
+            #     img = augment(img, args.dc_aug_param, device=device)
         img = img.to(device)
         if args.dataset == "ImageNet" and mode != "train":
             lab = torch.tensor([class_map[x.item()] for x in lab]).to(device)

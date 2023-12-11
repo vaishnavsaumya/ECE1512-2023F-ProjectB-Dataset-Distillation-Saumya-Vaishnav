@@ -1,0 +1,26 @@
+2023-12-10 15:57:58,953 INFO    MainThread:18328 [wandb_setup.py:_flush():76] Current SDK version is 0.16.1
+2023-12-10 15:57:58,953 INFO    MainThread:18328 [wandb_setup.py:_flush():76] Configure stats pid to 18328
+2023-12-10 15:57:58,953 INFO    MainThread:18328 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Saumya\.config\wandb\settings
+2023-12-10 15:57:58,953 INFO    MainThread:18328 [wandb_setup.py:_flush():76] Loading settings from D:\Documents\0_UofT_Courses\ECE1512 Digital Image Processing\ProjectB\Project_B_Supp\Project_B_Supp\DATM\distill\wandb\settings
+2023-12-10 15:57:58,953 INFO    MainThread:18328 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-12-10 15:57:58,953 INFO    MainThread:18328 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-12-10 15:57:58,954 INFO    MainThread:18328 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'distill\\DATM.py', 'program_abspath': 'D:\\Documents\\0_UofT_Courses\\ECE1512 Digital Image Processing\\ProjectB\\Project_B_Supp\\Project_B_Supp\\DATM\\distill\\DATM.py', 'program': 'D:\\Documents\\0_UofT_Courses\\ECE1512 Digital Image Processing\\ProjectB\\Project_B_Supp\\Project_B_Supp\\DATM\\distill\\DATM.py'}
+2023-12-10 15:57:58,954 INFO    MainThread:18328 [wandb_setup.py:_flush():76] Applying login settings: {'mode': 'offline'}
+2023-12-10 15:57:58,954 INFO    MainThread:18328 [wandb_init.py:_log_setup():524] Logging user logs to D:\Documents\0_UofT_Courses\ECE1512 Digital Image Processing\ProjectB\Project_B_Supp\Project_B_Supp\DATM\distill\wandb\offline-run-20231210_155758-n49d2qlh\logs\debug.log
+2023-12-10 15:57:58,954 INFO    MainThread:18328 [wandb_init.py:_log_setup():525] Logging internal logs to D:\Documents\0_UofT_Courses\ECE1512 Digital Image Processing\ProjectB\Project_B_Supp\Project_B_Supp\DATM\distill\wandb\offline-run-20231210_155758-n49d2qlh\logs\debug-internal.log
+2023-12-10 15:57:58,954 INFO    MainThread:18328 [wandb_init.py:init():564] calling init triggers
+2023-12-10 15:57:58,954 INFO    MainThread:18328 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'cfg': '../configs/MNIST/IPC10.yaml', 'dataset': 'MNIST', 'subset': 'imagenette', 'model': 'ConvNetD3', 'ipc': 10, 'eval_mode': 'S', 'num_eval': 1, 'eval_it': 500, 'epoch_eval_train': 1000, 'Iteration': 10000, 'lr_img': 100, 'lr_teacher': 0.01, 'lr_init': 0.01, 'batch_real': 256, 'batch_syn': 25, 'batch_train': 128, 'pix_init': 'samples_predicted_correctly', 'dsa': False, 'dsa_strategy': 'color_crop_cutout_flip_scale_rotate', 'data_path': '../dataset/MNIST/', 'buffer_path': '../buffer_storage/', 'expert_epochs': 2, 'syn_steps': 40, 'max_start_epoch': 50, 'min_start_epoch': 10, 'zca': True, 'load_all': False, 'no_aug': False, 'texture': False, 'canvas_size': 2, 'canvas_samples': 1, 'max_files': None, 'max_experts': None, 'force_save': False, 'ema_decay': 0.9995, 'lr_y': 10.0, 'Momentum_y': 0.9, 'project': 'MNIST_ipc10', 'threshold': 1.0, 'record_loss': False, 'Sequential_Generation': False, 'expansion_end_epoch': 3000, 'current_max_start_epoch': 20, 'skip_first_eva': False, 'parall_eva': False, 'lr_lr': 0.0001, 'res': 28, 'device': 'cuda', 'Initialize_Label_With_Another_Model': False, 'Initialize_Label_Model': '', 'Initialize_Label_Model_Dir': '', 'Label_Model_Timestamp': -1, 'zca_trans': ZCAWhitening(), 'im_size': (28, 28), 'dc_aug_param': None, 'dsa_param': None}
+2023-12-10 15:57:58,954 INFO    MainThread:18328 [wandb_init.py:init():614] starting backend
+2023-12-10 15:57:58,954 INFO    MainThread:18328 [wandb_init.py:init():618] setting up manager
+2023-12-10 15:57:58,956 INFO    MainThread:18328 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2023-12-10 15:57:58,958 INFO    MainThread:18328 [wandb_init.py:init():624] backend started and connected
+2023-12-10 15:57:58,961 INFO    MainThread:18328 [wandb_init.py:init():716] updated telemetry
+2023-12-10 15:57:58,995 INFO    MainThread:18328 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2023-12-10 15:57:59,004 INFO    MainThread:18328 [wandb_init.py:init():800] starting run threads in backend
+2023-12-10 15:57:59,137 INFO    MainThread:18328 [wandb_run.py:_console_start():2233] atexit reg
+2023-12-10 15:57:59,137 INFO    MainThread:18328 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2023-12-10 15:57:59,137 INFO    MainThread:18328 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2023-12-10 15:57:59,137 INFO    MainThread:18328 [wandb_run.py:_redirect():2178] Redirects installed.
+2023-12-10 15:57:59,137 INFO    MainThread:18328 [wandb_init.py:init():841] run started, returning control to user process
+2023-12-10 15:58:26,195 WARNING MsgRouterThr:18328 [router.py:message_loop():77] message_loop has been closed
