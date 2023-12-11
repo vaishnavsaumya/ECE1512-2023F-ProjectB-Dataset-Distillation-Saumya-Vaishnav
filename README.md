@@ -1,7 +1,15 @@
 # Towards Lossless Dataset Distillation via Difficulty-Aligned Trajectory Matching
 
 ## [Project Page](https://gzyaftermath.github.io/DATM/) | [Paper](https://arxiv.org/abs/2310.05773) | [Distilled Datasets](https://drive.google.com/drive/folders/1kZlYgiVrmFEz0OUyxnww3II7FBPQe7W0)
-To achieve lossless dataset distillation, an intuitive idea is to increase the size of the synthetic dataset.
+
+
+The code in this repository is taken from the official repository at:
+https://github.com/GzyAftermath/DATM
+
+The code files were modified to load the MNIST dataset and get the distilled dataset with 10 images per class using training parameters similar to those in task 1.
+
+The huge ".pt" model files have not been pushed to this repository due to size limits.
+<!-- To achieve lossless dataset distillation, an intuitive idea is to increase the size of the synthetic dataset.
 However, previous dataset distillation methods tend to perform worse than random selection as IPC (i.e., data keep ratio) increases.
 
 To address this issue, we find the difficulty of the generated patterns should be aligned with the size of the synthetic dataset
@@ -51,4 +59,4 @@ If you find our code useful for your research, please cite our paper.
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
-```
+``` -->
